@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="patientRegistration">
+
+<head>
+    <title>Create form for Patient registration with basic validations </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>patientRegistration form</h2>
+        <form name="form" ng-controller="mainForm">
+            <div class="container">
+                <div class="label">Name:</div>
+                <input type="text" placeholder=" enter a name" name="patientName" ng-model="patientName"
+                    ng-minlength="10" ng-maxlength="30" required></br></br>
+                <div class="label">phoneNumber:</div>
+                <input type="number" placeholder=" enter a phoneNumber" name="phoneNumber" ng-model="phoneNumber"
+                    ng-minlength="10" ng-maxlength="12" required></br></br>
+                <div class="label">DOB:</div>
+                <input type="date" placeholder=" enter a DOB" name="date" ng-model="date" required></br></br>
+                <div class="label">age:</div>
+                <input type="number" placeholder="enter a age" name="age" ng-model="age" ng-minlength="1"
+                    ng-maxlength="2" required></br></br>
+                <div class="label">address:</div>
+                <textarea placeholder="enter address" rows="3" name="address" ng-model="address" ng-minlength="50"
+                    ng-maxlength="200" required></textarea></br></br>
+                <div class="label">disease:</div>
+                <input type="text" placeholder="enter disease" name="disease" ng-model="disease" ng-minlength="15"
+                    ng-maxlength="30" required> </br></br>
+
+                <div>
+                    <button type="sumbit" class="sumbitButton">Submit</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+</body>
+
+</html>

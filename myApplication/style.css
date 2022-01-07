@@ -1,0 +1,55 @@
+div.form-container {
+    background-color: #fafaff;
+    padding: 2rem;
+    min-width: 27rem;
+    border-radius: 0.25rem;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+    color: #66a;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+  
+  .label {
+    width: 160px;
+    display: inline-block;
+    font-size: 0.9rem;
+    text-align: right;
+    vertical-align: top;
+  }
+  
+  input {
+    margin-left: 1rem;
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+  }
+  textarea {
+    margin-left: 1rem;
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+  }
+  
+  .sumbitButton {
+    margin-left: 12rem;
+    margin-top: 1.5rem;
+  }
+  
+ 
+  
+  div.container {
+    margin-top: 0.5rem;
+  }
+  
+  
+  
+  
+  
+  
