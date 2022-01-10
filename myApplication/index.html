@@ -8,96 +8,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <script  src="https://code.angularjs.org/1.4.6/angular-route.js"></script>
     <script src="app.js"></script>
+    <script src="Controller.js"></script>
     <link rel="stylesheet" href="style.css">
 </header>
 
 <body>
-    <div ng-app="patientRegistration" ng-controller="mainForm">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md col-md-offset-3">
-                    <h2>Enter Patient Details</h2>
-                    <form name="registerForm" ng-submit="submitForm()" novalidate>
-
-
-                        <!-- USERNAME -->
-                        <div class="form-group"
-                            ng-class="{ 'has-error' : registerForm.name.$invalid && !registerForm.name.$pristine }">
-                            <label>name</label>
-                            <input type="text" name="name" class="form-control" ng-model="name" ng-minlength="5"
-                                ng-maxlength="20" required>
-                            <p ng-show="registerForm.name.$error.minlength" class="help-block">name must be
-                                minimum of 5 characters.</p>
-                            <p ng-show="registerForm.name.$error.maxlength" class="help-block">name must be
-                                maximum of 20 characters.</p>
-                        </div>
-
-                        <!-- phoneNumber -->
-                        <div class="form-group"
-                            ng-class="{ 'has-error' : registerForm.phoneNumber.$invalid && !registerForm.phoneNumber.$pristine }">
-                            <label>phoneNumber</label>
-                            <input type="text" name="phoneNumber" class="form-control" ng-model="user.phoneNumber"
-                                ng-minlength="5" ng-maxlength="20" required>
-                            <p ng-show="registerForm.phoneNumber.$error.minlength" class="help-block">phoneNumber must
-                                be
-                                minimum of 5 characters.</p>
-                            <p ng-show="registerForm.phoneNumber.$error.maxlength" class="help-block">phoneNumber must
-                                be
-                                maximum of 20 characters.</p>
-                        </div>
-
-
-                        <!-- AGE -->
-                        <div class="form-group" ng-class="{ 'has-error' : invalid_age && !registerForm.age.$pristine}">
-                            <label>Age:</label>
-                            <input type="number" name="age" class="form-control" ng-model="age" ng-change='ageChange()'
-                                required>
-                            <p ng-show="invalid_age" class="help-block">{{invalidAgeMsg}}</p>
-                        </div>
-
-                        <!-- address -->
-                        <div class="form-group"
-                            ng-class="{ 'has-error' : registerForm.address.$invalid && !registerForm.address.$pristine }">
-                            <label>address</label>
-                            <input type="text" name="address" class="form-control" ng-model="address" ng-minlength="20"
-                                ng-maxlength="100" required>
-                            <p ng-show="registerForm.address.$error.minlength" class="help-block">address must be
-                                minimum of 20 characters.</p>
-                            <p ng-show="registerForm.address.$error.maxlength" class="help-block">address must be
-                                maximum of 100 characters.</p>
-                        </div>
-                        <!-- disease -->
-                        <div class="form-group"
-                            ng-class="{ 'has-error' : registerForm.disease.$invalid && !registerForm.disease.$pristine }">
-                            <label>disease</label>
-                            <input type="text" name="disease" class="form-control" ng-model="user.disease"
-                                ng-minlength="5" ng-maxlength="20" required>
-                            <p ng-show="registerForm.disease.$error.minlength" class="help-block">disease must be
-                                minimum of 5 characters.</p>
-                            <p ng-show="registerForm.disease.$error.maxlength" class="help-block">disease must be
-                                maximum of 20 characters.</p>
-                            </br></br>
-
-                            <!-- date -->
-                            <div class="form-group">
-                                <label>birthday:</label>
-                                <input type="date" name="birthday" class="form-control" id="birthday"
-                                    ng-model="birthday" required>
-                            </div>
-
-                            <button type="submit" ng-disabled="invalid_age " class="btn btn-primary"
-                                ng-disabled="registerForm.$invalid">Submit</button>
-                        </div>
-                    </form>
-
-
-                </div>
-            </div>
-
-        </div>
+    <div ng-app="patientRegistration" >
+        <div ng-view=""></div>
     </div>
+  
 </body>
 
 
