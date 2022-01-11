@@ -31,9 +31,9 @@
 
 
                 <!-- AGE -->
-                <div class="form-group" ng-class="{ 'has-error' : invalid_age && !registerForm.age.$pristine}">
+                <div class="form-group" >
                     <label>Age:</label>
-                    <input type="number" name="age" class="form-control" ng-model="age" ng-change="ageChange()"
+                    <input type="number" name="age" class="form-control" ng-model="id"  id="getAge"
                         disabled>
                     <p ng-show="invalid_age" class="help-block">{{invalidAgeMsg}}</p>
                 </div>
@@ -54,9 +54,9 @@
                     ng-class="{ 'has-error' : registerForm.disease.$invalid && !registerForm.disease.$pristine }">
                     <label>disease</label>
                     <input type="text" name="disease" class="form-control" ng-model="disease"
-                        ng-minlength="20" ng-maxlength="20" required>
+                        ng-minlength="10" ng-maxlength="20" required>
                     <p ng-show="registerForm.disease.$error.minlength" class="help-block">disease must be
-                        minimum of 20 characters.</p>
+                        minimum of 10 characters.</p>
                     <p ng-show="registerForm.disease.$error.maxlength" class="help-block">disease must be
                         maximum of 20 characters.</p>
                     </br></br>
@@ -64,11 +64,11 @@
                     <!-- date -->
                     <div class="form-group">
                         <label>birthday:</label>
-                        <input type="date" name="birthday" class="form-control" id="birthday" ng-model="DOB" 
+                        <input type="date" name="birthday" class="form-control" id="birthday" ng-model="DOB" ng-change="findage()"
                              required>
                     </div>
 
-                    <button type="submit" ng-disabled="invalid_age " class="btn btn-primary"
+                    <button type="submit"  class="btn btn-primary"
                         ng-disabled="registerForm.$invalid">Submit</button>
                 </div>
             </form>
@@ -78,3 +78,9 @@
     </div>
 
 </div>
+
+<!-- ng-disabled="invalid_age " -->
+
+<!-- ng-class="{ 'has-error' : invalid_age && !registerForm.age.$pristine}" -->
+
+<!-- ng-change="ageChange()" -->
